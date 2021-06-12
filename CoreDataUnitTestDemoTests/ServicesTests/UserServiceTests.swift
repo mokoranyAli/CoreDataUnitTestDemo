@@ -44,6 +44,8 @@ class UserServiceTests: XCTestCase {
     
     // MARK: - Tests
     
+    /// ``` Test Add User```
+    ///
     func testUserService_whenAddUserNoramlly_shouldAddItAndCompleteWithUser() {
         
         // When
@@ -56,6 +58,8 @@ class UserServiceTests: XCTestCase {
         XCTAssertEqual(user.job, "iOS Developer", "User job should be iOS Developer")
     }
     
+    /// ``` Test Root Context```
+    ///
     func testRootContext_IsSavedAfterAddingUser_shouldBeSaved() {
         
         
@@ -78,6 +82,8 @@ class UserServiceTests: XCTestCase {
         }
     }
     
+    /// ``` Test Get User with valid id ```
+    ///
     func testUserService_whenGetUserWithValidID_shouldGetObject() {
         
         // Given
@@ -90,6 +96,8 @@ class UserServiceTests: XCTestCase {
         XCTAssertEqual(user, expectedUser, "UserID should be as expected")
     }
     
+    /// ``` Test Get User with invalid id ```
+    ///
     func testUserService_whenGetUserWithInValidID_shouldGetNil() {
         _ = sut.addUser(1, name: "Mohamed", job: "iOS Developer")
         let expectedUser = sut.getUser(2)
