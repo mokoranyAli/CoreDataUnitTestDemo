@@ -76,12 +76,6 @@ public extension CoreDataStack {
             }
         }
     }
-}
-
-
-// MARK: - Private Handlers
-//
-private extension CoreDataStack {
     
     /// New Derived Context
     /// When using a single managed object context in Core Data, everything runs on the main UI thread.
@@ -91,6 +85,13 @@ private extension CoreDataStack {
         let context = storeContainer.newBackgroundContext()
         return context
     }
+}
+
+
+// MARK: - Private Handlers
+//
+private extension CoreDataStack {
+    
     
     /// Saving changing in data using the current context
     ///
